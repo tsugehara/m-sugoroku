@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>すごろくテスト</title>
+	<style>
+	.main-container {
+		margin:0 auto;
+		width:480px;
+		height:480px;
+	}
+	</style>
+	<script type="text/javascript" src="./lib/jgame.js/js/jgame.js"></script>
+	<script type="text/javascript" src="./lib/typescript-astar/js/astar.js"></script>
+	<script type="text/javascript" src="./lib/AutoSugoroku/js/autosugoroku.js"></script>
+	<script type="text/javascript" src="./lib/pv/js/pv.js"></script>
+	<script type="text/javascript" src="./lib/ai/js/ai.js"></script>
+	<script type="text/javascript" src="js/m-sugoroku.js"></script>
+	<script type="text/javascript">
+window.onload = function() {
+	var game = new jg.Game(480, 480);
+	game.enablePointHandler();
+	game.enableKeyboardHandler();
+	game.preload({
+		dice: "dice64.png",
+		buttons: "buttons.png",
+		chara1: "chara1.png",
+		tile: "tile.png",
+		arrows: "arrows.png",
+		waku: "waku.png"
+	});
+	var loaded = function() {
+		var sugorokuScene = new SugorokuScene(game);
+		sugorokuScene.start(game);
+		game.loaded.remove(loaded);
+	}
+	game.loaded.handle(loaded);
+};
+</script>
+</head>
+<body>
+<div class="main-container">
+	<div id="jgame">
+	</div>
+	<div id="fps">
+		fps: <span id="fps_show"></span>
+	</div>
+</div>
+	<div>
+	<h2>素材について</h2>
+	<ul>
+	<li>サイコロ画像、メニューのキャンプアイコン<br/>
+	サイコロ画像とメニューのアイコンはぴぽやさんの素材を利用させていただきました.<br/>
+	<a href="http://piposozai.blog76.fc2.com/">http://piposozai.blog76.fc2.com/</a><br/>
+	サイコロ画像は下記より。<br/>
+	<a href="http://piposozai.blog76.fc2.com/blog-entry-122.html">http://piposozai.blog76.fc2.com/blog-entry-122.html</a><br/>
+	キャンプアイコンは下記より。<br />
+	<a href="http://piposozai.wiki.fc2.com/wiki/アイコン画像">http://piposozai.wiki.fc2.com/wiki/アイコン画像</a><br/>
+	利用規約は下記に準じております。<br/>
+	<a href="http://piposozai.blog76.fc2.com/blog-category-2.html">http://piposozai.blog76.fc2.com/blog-category-2.html</a></li>
+	<li>キャラ画像<br/>
+	キャラ画像はFirst Seed Materialさんのものを利用させていただきました。<br/>
+	<a href="http://www.tekepon.net/fsm/">http://www.tekepon.net/fsm/</a><br/>
+	このキャラ画像を、このシステムを見る以外の用途には使用しないで下さい。<br/>
+	<li>ドア画像<br/>
+	ドア画像は、ドット絵世界さんのものを利用させていただきました。<br/>
+	<a href="http://yms.main.jp/index.html">http://yms.main.jp/index.html</a>
+	</li>
+	<li>宝箱画像<br/>
+	宝箱画像は、無料イラスト素材.comさんのものを利用させていただきました。<br/>
+	<a href="http://www.無料イラスト素材.com/">http://www.無料イラスト素材.com/</a>
+	</li>
+	</ul>
+	</div>
+</body>
+</html>

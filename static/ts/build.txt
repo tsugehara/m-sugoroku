@@ -1,0 +1,13 @@
+../../jgame.js/lib/jgame.d.ts
+../../typescript-astar/js/astar.d.ts
+../../AutoSugoroku/js/autosugoroku.d.ts
+../../pv/js/pv.d.ts
+../../ai/js/ai.d.ts
+Player.ts
+Arrow.ts
+Dice.ts
+MenuGroup.ts
+SugorokuScene.ts
+BattleCharacter.ts
+Battle.ts
+--out ../js/m-sugoroku.js

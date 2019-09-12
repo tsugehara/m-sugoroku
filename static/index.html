@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>すごろくテスト</title>
+	<script type="text/javascript" src="./lib/jgame.js/js/jgame.js"></script>
+	<script type="text/javascript" src="./lib/typescript-astar/js/astar.js"></script>
+	<script type="text/javascript" src="./lib/AutoSugoroku/js/autosugoroku.js"></script>
+	<script type="text/javascript" src="./lib/pv/js/pv.js"></script>
+	<script type="text/javascript" src="./lib/ai/js/ai.js"></script>
+	<script type="text/javascript" src="js/m-sugoroku.js"></script>
+	<script type="text/javascript">
+window.onload = function() {
+	var game = new jg.Game(480, 480);
+	game.enablePointHandler();
+	game.enableKeyboardHandler();
+	game.preload({
+		dice: "dice64.png",
+		buttons: "buttons.png",
+		chara1: "chara1.png",
+		tile: "tile.png",
+		arrows: "arrows.png",
+		waku: "waku.png"
+	});
+	var loaded = function() {
+		var sugorokuScene = new SugorokuScene(game);
+		sugorokuScene.start(game);
+		game.loaded.remove(loaded);
+	}
+	game.loaded.handle(loaded);
+	game.fitToWindow();
+};
+</script>
+</head>
+<body>
+</body>
+</html>
