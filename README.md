@@ -40,3 +40,14 @@ http://localhost:3000 がすごろく画面、 http://localhost:3000/battle.html
 一部他所様の素材が入っています。詳しくはhtmlファイルを参照してください。
 
 ソースコードは自由にしてくれて構いませんが、素材は配布元の権利に注意して取り扱っていただければ。
+
+## ライブラリ
+
+自作ライブラリを結構使っています（記憶がなかったため発掘するのに苦労しました）。
+
+- [jgame.js](http://jgame-js.osdn.jp/)
+- [rader-ai](https://github.com/tsugehara/rader-ai)
+- [jgpv](https://github.com/tsugehara/jgpv)
+- [AutoSugoroku](https://github.com/tsugehara/AutoSugoroku)
+
+lib以下のコードが気になる方はその辺りから発掘していただければ。
